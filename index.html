@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
             <a href="#" class="company-logo">
                 <img src="assets/logo.png" alt="">
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-links">Products</a></li>
                     <li><a href="#" class="hover-links">Customer</a></li>
@@ -29,6 +30,9 @@
                     <li><a href="#" class="hover-links primary-button">Sign up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
     <header>
@@ -47,7 +51,7 @@
         <div class="container">
             <div class="small-bold-text companies-header">The worlds best companies rely on usabilityHub to make better design decisions</div>
             <div class="logos flex">
-                <img class="logo" src="logo1.png">
+                <img class="logo" src="./assets/logo1.png">
                 <img class="logo" src="./assets/logo2.png">
                 <img class="logo" src="./assets/logo3.png">
                 <img class="logo" src="./assets/logo4.png">
@@ -122,14 +126,15 @@
 
 
     <section class="big-feature-section">
-        <div class="container flex big-feature-container">
+        <div class="container flex big-feature-container" id="second-big-feature">
+            <div class="feature-img">
+                <img src="./assets/bigfeature2.jpg" alt="">
+            </div>
+
             <div class="features-desc flex">
                 <h4>Effortless validation</h4>
                 <h3>Design professionals</h3>
                 <p>Test interfaces, interaction flows, iconography and more, to help you create intuitive and delightful experiences for your eyes</p>
-            </div>
-            <div class="feature-img">
-                <img src="./assets/bigfeature2.jpg" alt="">
             </div>
 
 
@@ -221,6 +226,13 @@
         </div>
     </div>
     <script src="https://kit.fontawesome.com/88a3b385ab.js" crossorigin="anonymous"></script>
+    <script>
+        const togglebutton = document.getElementById('nav-toggle');
+        const navlinks = document.getElementById('nav-links');
+        togglebutton.addEventListener('click', () => {
+            navlinks.classList.toggle('active');
+        })
+    </script>
 </body>
 
 </html>
